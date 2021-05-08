@@ -1,6 +1,7 @@
 
 def test_add_group(app, excel_data):
     group = excel_data
+
     old_list = app.groups.get_group_list()
     app.groups.add_new_group(group)
     new_list = app.groups.get_group_list()
