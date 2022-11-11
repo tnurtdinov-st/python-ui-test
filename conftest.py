@@ -16,6 +16,7 @@ def pytest_generate_tests(metafunc):
     for fixture in metafunc.fixturenames:
         if fixture.startswith("excel_"):
             testdata = load_from_excel(fixture[6:])
+            print("")
             metafunc.parametrize(fixture, testdata, ids=[str(x) for x in testdata])
 
 def load_from_excel(file):
