@@ -10,6 +10,8 @@ import numpy as np
 def app(request):
     fixture = Application("C:\\Program Files (x86)\\GAS Softwares\\Free Address Book\\AddressBook.exe")
     request.addfinalizer(fixture.destroy)
+    print("111")
+    print("2222")
     return fixture
 
 def pytest_generate_tests(metafunc):
